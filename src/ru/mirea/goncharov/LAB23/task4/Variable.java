@@ -1,4 +1,4 @@
-package ru.mirea.goncharov.LAB23.task4_smth_wrng;
+package ru.mirea.goncharov.LAB23.task4;
 
 class Variable extends Expression {
     private final String name;

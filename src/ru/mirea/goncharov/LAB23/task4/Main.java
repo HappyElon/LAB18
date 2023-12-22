@@ -1,13 +1,14 @@
-package ru.mirea.goncharov.LAB23.task4_smth_wrng;
+package ru.mirea.goncharov.LAB23.task4;
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        if (args.length != 1) {
-            System.out.println("Usage: java Main <expression>");
-            return;
-        }
+        Scanner scanner = new Scanner(System.in);
 
-        String inputExpression = args[0];
+        System.out.print("Enter expression: ");
+        String inputExpression = scanner.nextLine().replaceAll("\\s+","");
+
         ExpressionParser parser = new ExpressionParser(inputExpression);
         Expression expression = parser.parse();
 
@@ -22,5 +23,7 @@ public class Main {
                 }
             }
         }
+
+        scanner.close();
     }
 }
